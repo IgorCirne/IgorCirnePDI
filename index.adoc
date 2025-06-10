@@ -17,23 +17,23 @@ Esta é uma página dedicada aos projetos e atividades de PDI, criada com AsciiD
 == Lista 1
 
 === Capítulo 2. Manipulando pixels em uma imagem
-Com base no programa https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/pixels.cpp[pixels.cpp] , foi gerado o programa https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/regions.cpp[regions.cpp] que é capaz de,
+Com base no programa https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/pixels.cpp[pixels.cpp] , foi gerado o programa https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/regions.cpp[regions.cpp] que é capaz de,
 ao entrar com as coordenadas (x, y) de dois pontos P1 e P2, deixar a região entre eles com cores em negativo.
 
 Para o exercício, a imagem abaixo foi dada como entrada no código:
 
 .Figura 1: biel.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/biel.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/biel.png]
 image::exercicio_2/biel.png[]
 
-E após compilar o programa com o https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/CMakeLists.txt[CMakeLists.txt] adequado, foram obtido os resultados abaixo:
+E após compilar o programa com o https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/CMakeLists.txt[CMakeLists.txt] adequado, foram obtido os resultados abaixo:
 
 
 P1 = [100, 50]
 P2 = [200, 200]
 
 .Figura 2: biel-2.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/biel-2.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/biel-2.png]
 image::exercicio_2/biel-2.png[]
 
 
@@ -41,15 +41,15 @@ P1 = [50, 50]
 P2 = [100, 150]
 
 .Figura 3: biel-3.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/biel-3.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/biel-3.png]
 image::exercicio_2/biel-3.png[]
 
 
-Para a segunda parte do exercício, a de troca de regiões, foi feito o código de https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/trocaregioes.cpp[trocaregioes.cpp] e foi preciso modificar um pouco o arquivo anterior para este https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/CMakeLists2.txt[CMakeLists.txt], novamente, com a imagem original do Biel.png como entrada, resultando encontrado foi o da saída abaixo:
+Para a segunda parte do exercício, a de troca de regiões, foi feito o código de https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/trocaregioes.cpp[trocaregioes.cpp] e foi preciso modificar um pouco o arquivo anterior para este https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/CMakeLists2.txt[CMakeLists.txt], novamente, com a imagem original do Biel.png como entrada, resultando encontrado foi o da saída abaixo:
 
 
 .Figura 4: trocaregioes.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_2/trocaregioes.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_2/trocaregioes.png]
 image::exercicio_2/trocaregioes.png[]
 
 
@@ -60,36 +60,36 @@ Nesse capítulo foi instruído na atividade à se fazer uma imagem de 256x256 pi
 Senóide do exercício, com 8 períodos:
 
 .Figura 5: Senóide de 8 períodos
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_5/8-senoide-256.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_5/8-senoide-256.png]
 image::exercicio_5/8-senoide-256.png[]
 
-Arquivo YML: https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_5/8-senoide-256.yml[8-senoide-256.yml]
+Arquivo YML: https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_5/8-senoide-256.yml[8-senoide-256.yml]
 
 O resultado gerado pelo programa para a senóide de 4 períodos foi a seguinte:
 
 .Figura 6: Senóide de 4 períodos
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_5/4-senoide-256.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_5/4-senoide-256.png]
 image::exercicio_5/4-senoide-256.png[]
 
-Arquivo YML gerado: https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_5/4-senoide-256.yml[4-senoide-256.yml]
+Arquivo YML gerado: https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_5/4-senoide-256.yml[4-senoide-256.yml]
 
 A outra parte do exercício pedia para traçar um gráfico da diferença calculada ao londo de uma linha extraída das imagens correspondentes.
 O gráfico extraído foi esse:
 
-.Figura 7: Diferença entre senóides (extraída com a ajuda do seguinte programa feito em Python https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_5/diferencas.ipynb[diferencas.ipynb], e compilado no Jupyter Notebook)
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_5/diferenca.png]
+.Figura 7: Diferença entre senóides (extraída com a ajuda do seguinte programa feito em Python https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_5/diferencas.ipynb[diferencas.ipynb], e compilado no Jupyter Notebook)
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_5/diferenca.png]
 image::exercicio_5/diferenca.png[]
 
 Pode-se notar na imagem que anova onda formada pela sobreposição das senóides das imagens anteriores também é periódica, mas com um padrão muito mais complexo do que as suas geradoras, isso acontece porque as ondas que a formaram se misturam e se interferem, o que acaba gerando essa nova estrutura oscilatória.
 
 === Capítulo 10, Decomposição de imagens em planos de bits
 
-Essa atividade consiste em usar o código https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_10/bitplanes.cpp[bitplanes.cpp] como base e criar um que possa recuperar uma imagem codificada escondida dentro de outra, em um processo chamado de esteganografia.
+Essa atividade consiste em usar o código https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_10/bitplanes.cpp[bitplanes.cpp] como base e criar um que possa recuperar uma imagem codificada escondida dentro de outra, em um processo chamado de esteganografia.
 
-Foi criado então o código https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_10/recover.cpp[recover.cpp] com esse intuito, e utilizado na imagem à seguir:
+Foi criado então o código https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_10/recover.cpp[recover.cpp] com esse intuito, e utilizado na imagem à seguir:
 
 .Figura 8: Imagem codificada
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_10/esteganografia.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_10/esteganografia.png]
 image::exercicio_10/esteganografia.png[]
 
 
@@ -97,13 +97,13 @@ image::exercicio_10/esteganografia.png[]
 O resultado que saiu após o código ser rodado foi a seguinte imagem:
 
 .Figura 9: Imagem recuperada
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_10/imagem_recuperada.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_10/imagem_recuperada.png]
 image::exercicio_10/imagem_recuperada.png[]
 
 === Capítulo 11, Preenchendo regiões
-Nessa situação do código de https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/labeling.cpp[labeling.cpp] somente 255 objetos poderem ser verificados, isso acontece por causa do tipo de dados (uchar) que é utilizado, pois como esse tipo possui 8 bits, o máximo de tons que se pode utilizar é de 2^8^, e caso seja necessário contar mais do que 255 objetos, o código iria acabar voltando ao tom 0, para que isso seja possível, é necessário uma mudança de tipo para um dado que tenha mais capacidade de armazenamento, como por exemplo, usar CV_16U que suporta 16bits, assim poderia contar até 2^16^ objetos na figura.
+Nessa situação do código de https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/labeling.cpp[labeling.cpp] somente 255 objetos poderem ser verificados, isso acontece por causa do tipo de dados (uchar) que é utilizado, pois como esse tipo possui 8 bits, o máximo de tons que se pode utilizar é de 2^8^, e caso seja necessário contar mais do que 255 objetos, o código iria acabar voltando ao tom 0, para que isso seja possível, é necessário uma mudança de tipo para um dado que tenha mais capacidade de armazenamento, como por exemplo, usar CV_16U que suporta 16bits, assim poderia contar até 2^16^ objetos na figura.
 
-A alteração seria abaixo da linha 21 do programa https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/labeling.cpp[labeling.cpp], que é onde seria adicionado as linhas de código abaixo para se criar a iamgem com 16 bits para armazenar os rótulos, ao final, antes dos comandos de *imshow*, faz-se uma conversão de volta para 8 bits para poder normalizar a imagem e mostrá-la em tela novamente.
+A alteração seria abaixo da linha 21 do programa https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/labeling.cpp[labeling.cpp], que é onde seria adicionado as linhas de código abaixo para se criar a iamgem com 16 bits para armazenar os rótulos, ao final, antes dos comandos de *imshow*, faz-se uma conversão de volta para 8 bits para poder normalizar a imagem e mostrá-la em tela novamente.
 
 [source,cpp]
 ----
@@ -129,7 +129,7 @@ A alteração seria abaixo da linha 21 do programa https://github.com/Arthurfrc/
 
 Entre "*" estão as partes adicionadas ao código de labeling.cpp para poder marcar mais de 255 objetos em cena.
 
-Para a segunda parte do exercício, onde devemos aprimorar o código de https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/labeling.cpp[labeling.cpp] para que seja possível identificar regiões com ou sem buracos internos, foi feito o seguinte arquivo https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/newlabeling.cpp[newlabeling.cpp], onde foi assumido que não se deve contar as bolhas nas bordas da imagem.
+Para a segunda parte do exercício, onde devemos aprimorar o código de https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/labeling.cpp[labeling.cpp] para que seja possível identificar regiões com ou sem buracos internos, foi feito o seguinte arquivo https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/newlabeling.cpp[newlabeling.cpp], onde foi assumido que não se deve contar as bolhas nas bordas da imagem.
 
 Aqui abaixo podemos observar alguns passos do processo de FloodFill:  +
 1. A imagem bolhas.png de entrada  +
@@ -138,46 +138,46 @@ Aqui abaixo podemos observar alguns passos do processo de FloodFill:  +
 4. A contagem do total de bolhas  +
 
 .Figura 10: Bolhas
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/bolhas.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/bolhas.png]
 image::exercicio_11/bolhas.png[]
 
 
 .Figura 11: Bolhas 2
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/bolhas2.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/bolhas2.png]
 image::exercicio_11/bolhas2.png[]
 
 .Figura 12: Bolhas 3
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/bolhas3.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/bolhas3.png]
 image::exercicio_11/bolhas3.png[]
 
 .Figura 13: Contagem de bolhas
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_11/status.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_11/status.png]
 image::exercicio_11/status.png[]
 
 
 === Capítulo 12, Manipulação de histogramas
 
-Para este exercício, foi proposto que fizéssemos um código tendo o https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_12/histogram.cpp[histogram.cpp] como base para equalizar o histograma de uma imagem gerada por uma câmera.
-Nesse caso, foi utilizado o programa DroidCAM em conjunto com um celular Samsungo S20 FE para conseguir obter os resultados em vídeo e capturas de tela do histograma, o código que foi utilizado é o https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_12/equalize.cpp[equalize.cpp], e os resultados obtidos foram as imagens a seguir:
+Para este exercício, foi proposto que fizéssemos um código tendo o https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_12/histogram.cpp[histogram.cpp] como base para equalizar o histograma de uma imagem gerada por uma câmera.
+Nesse caso, foi utilizado o programa DroidCAM em conjunto com um celular Samsungo S20 FE para conseguir obter os resultados em vídeo e capturas de tela do histograma, o código que foi utilizado é o https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_12/equalize.cpp[equalize.cpp], e os resultados obtidos foram as imagens a seguir:
 
 .Figura 14: Dedo em frente à câmera
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_12/dedo .png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_12/dedo .png]
 image::exercicio_12/dedo.png[]
 
 .Figura 15: Polvo Rosa
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_12/polvo_rosa.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_12/polvo_rosa.png]
 image::exercicio_12/polvo_rosa.png[]
 
 .Figura 16: Polvo Verde
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_12/polvo_verde.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_12/polvo_verde.png]
 image::exercicio_12/polvo_verde.png[]
 
 .Figura 17: Tentáculo rosa sobre a câmera
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_12/rosa.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_12/rosa.png]
 image::exercicio_12/rosa.png[]
 
 .Figura 18: Tentáculo verde sobre a câmera
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_12/verde.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_12/verde.png]
 image::exercicio_12/verde.png[]
 
 
@@ -185,21 +185,21 @@ image::exercicio_12/verde.png[]
 
 Neste exercício é proposto que seja feito filtros de média com tamanhos de máscaras de 11x11 e 21x21, faça uma captura de imagem e compare ambos os filtros com o filtro de média com máscara de tamanho 3x3.
 
-O código utlilizado se encontra neste arquivo https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_14/convolucao.cpp[convolucao.cpp]
+O código utlilizado se encontra neste arquivo https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_14/convolucao.cpp[convolucao.cpp]
 
 Após ser feito a captura com a mesma imagem, as saídas dos filtros fpra as seguintes:
 
 .Figura 19: Saída de filtro com máscara tamanho 3x3
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_14/Filtro3x3.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_14/Filtro3x3.png]
 image::exercicio_14/Filtro3x3.png[]
 
 .Figura 20: Saída de filtro com máscara tamanho 11x11
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_14/Filtro11x11.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_14/Filtro11x11.png]
 image::exercicio_14/Filtro11x11.png[]
 
 
 .Figura 21: Saída de filtro com máscara tamanho 21x21
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_14/Filtro21x21.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_14/Filtro21x21.png]
 image::exercicio_14/Filtro21x21.png[]
 
 === Capítulo 15, Filtragem no domínio espacial II - TiltShift
@@ -208,57 +208,57 @@ image::exercicio_14/Filtro21x21.png[]
 
 === Capítulo 16, A Tranformada Discreta de Fourier
 
-Para o exercício deste capítulo, é pedido que seja calculado o espectro de magnetude de uma imagem de senóide de 256x256 pixels usando o código do arquivo de https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_16/dft.cpp[dft.cpp] , e compará-lo com um código adaptado com base no https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_5/filestorage.cpp[filestorage.cpp] onde esse código terá como entrada um código em YAML equivalente à imagem de entrada do arquivo dft.cpp.
+Para o exercício deste capítulo, é pedido que seja calculado o espectro de magnetude de uma imagem de senóide de 256x256 pixels usando o código do arquivo de https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_16/dft.cpp[dft.cpp] , e compará-lo com um código adaptado com base no https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_5/filestorage.cpp[filestorage.cpp] onde esse código terá como entrada um código em YAML equivalente à imagem de entrada do arquivo dft.cpp.
 
-O código feito foi o https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_16/dft_2.cpp[dft_2.cpp] , onde a entrada foi a mesma imagem de 256x256 pixels, porém o arquivo ".yml" da mesma, gerado com o filestorage.cpp anteriormente.
+O código feito foi o https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_16/dft_2.cpp[dft_2.cpp] , onde a entrada foi a mesma imagem de 256x256 pixels, porém o arquivo ".yml" da mesma, gerado com o filestorage.cpp anteriormente.
 
 .Figura 22: Imagem de entrada
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_16/figura.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_16/figura.png]
 image::exercicio_16/Figura.png[]
 
 As saídas que consegui foram as seguintes:
 
 .Figura 23: Saída direto da imagem
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_16/espectros.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_16/espectros.png]
 image::exercicio_16/Espectros.png[]
 
 .Figura 24: Saída do código YAML da imagem
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_16/espectros_2.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_16/espectros_2.png]
 image::exercicio_16/Espectros_2.png[]
 
 Pode não parecer nada diferente, mas a segunda imagem se aproxima mais da senóide original pelo fato de ela ser uma representação feita diretamente dos valores obtidos ao invés de serem obtidos após uma conversão para imagem como a primeira.
 
 === Capítulo 17. Filtragem no Domínio da Frequência
 
-Nesse capítulo é proposto que peguemos o código da https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_17/dftfilter.cpp[dftfilter.cpp] e modifiquemos para poder corrigir iluminações em cenas com o filtro homomórfico.
+Nesse capítulo é proposto que peguemos o código da https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_17/dftfilter.cpp[dftfilter.cpp] e modifiquemos para poder corrigir iluminações em cenas com o filtro homomórfico.
 
-Com as mudanças feitas, foi obtido o seguinte código https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_17/homomorfico.cpp[homomorfico.cpp] , onde, ao ser rodado com a imagem, mostrará uma barra para poder ajustar a iluminação da imagem como mostra no exemplo com as fotos do Biel à seguir.
+Com as mudanças feitas, foi obtido o seguinte código https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_17/homomorfico.cpp[homomorfico.cpp] , onde, ao ser rodado com a imagem, mostrará uma barra para poder ajustar a iluminação da imagem como mostra no exemplo com as fotos do Biel à seguir.
 
 
 .Figura 25: Filtro homomórfico automático antes de ser implementado o slider para ajustes manuais
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_17/homomorfico.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_17/homomorfico.png]
 image::exercicio_17/homomorfico.png[]
 
 .Figura 26: Imagem original
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_17/biel.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_17/biel.png]
 image::exercicio_17/biel.png[]
 
 .Figura 27: Filtro com 14 selecionado na barra
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_17/Filtro-14.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_17/Filtro-14.png]
 image::exercicio_17/Filtro-14.png[]
 
 .Figura 28: Filtro com 50 selecionado na barra
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_17/Filtro-50.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_17/Filtro-50.png]
 image::exercicio_17/Filtro-50.png[]
 
 .Figura 29: Filtro com 100 selecionado na barra
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_17/Filtro-100.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_17/Filtro-100.png]
 image::exercicio_17/Filtro-100.png[]
 
 === Capítulo 20. Quantização vetorial com k-means
 
-No capítulo em questão, a atividade a ser desenvolvida era a de usar o https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_20/kmeans.cpp[kmeans.cpp] como base para desenvolver um outro que execute com o parâmetro de nRodadas = 1, gerando 10 rodadas diferentes de algoritmos, e a cada rodada, gerando centros aleatórios para o algoritmo iniciar.
-Foram realizadas as mudanças e o algoritmo final foi o https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_20/kmeans_random.cpp[kmeans_random.cpp] , e ao final das 10 rodadas com a imagem do https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_20/biel.png[Biel.png] , os resultados foram as seguintes saídas:
+No capítulo em questão, a atividade a ser desenvolvida era a de usar o https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_20/kmeans.cpp[kmeans.cpp] como base para desenvolver um outro que execute com o parâmetro de nRodadas = 1, gerando 10 rodadas diferentes de algoritmos, e a cada rodada, gerando centros aleatórios para o algoritmo iniciar.
+Foram realizadas as mudanças e o algoritmo final foi o https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_20/kmeans_random.cpp[kmeans_random.cpp] , e ao final das 10 rodadas com a imagem do https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_20/biel.png[Biel.png] , os resultados foram as seguintes saídas:
 
 [cols="a,a,a", frame=none, grid=none, align=center]
 |===
@@ -292,18 +292,18 @@ As saídas estão diferentes exatamente por causa dos centros escolhidos aleator
 
 === Capítulo 21. Extração de contornos
 
-Neste capítulo, o exercício é dividido em 2 partes, a primeira pede para aplicar o código original do https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_21/contornos.cpp[contornos.cpp] na imagem dos retângulos e ver quantos pontos são gerados para o seu contorno.
+Neste capítulo, o exercício é dividido em 2 partes, a primeira pede para aplicar o código original do https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_21/contornos.cpp[contornos.cpp] na imagem dos retângulos e ver quantos pontos são gerados para o seu contorno.
 
 O resultado foi o seguinte:
 
 .Figura 30: Pontos de contorno extraídos
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_21/contornos_original.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_21/contornos_original.png]
 image::exercicio_21/contornos_original.png[]
 
-Após isso, a atividade pediu para modificar o programa e extrair os contornos novamente, ao final o código finalizado ficou neste arquivo https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_21/contornos2.cpp[contornos2.cpp] e a saída foi a seguinte:
+Após isso, a atividade pediu para modificar o programa e extrair os contornos novamente, ao final o código finalizado ficou neste arquivo https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_21/contornos2.cpp[contornos2.cpp] e a saída foi a seguinte:
 
 .Figura 31: Pontos de contorno simplificados extraídos
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_21/cont_retangulos.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_21/cont_retangulos.png]
 image::exercicio_21/cont_retangulos.png[]
 
 Como podemos notar, o número de pontos encontrados caiu de 746 para 10, ou seja, as modificações pedidas no código fizeram que pontos redundantes fossem ignorados na hora de contar os pontos do contorno.
@@ -314,14 +314,14 @@ OBS: O resultado IDEAL seriam 8 pontos, mas é possível que tenham sido contado
 
 Esse exercício foi um pouco complicado de se resolver, pois ele pedia para procurar por uma pessoa no meio da multidão, o código feito para isso foi o 
 
-https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_22/momentos-regioes-2.cpp[momento-regioes-2.cpp] , que rodou com as seguintes imagens para procurar.
+https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_22/momentos-regioes-2.cpp[momento-regioes-2.cpp] , que rodou com as seguintes imagens para procurar.
 
 .Figura 32: Pessoa.jpg
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_22/pessoa.jpg]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_22/pessoa.jpg]
 image::exercicio_22/pessoa.jpg[]
 
 .Figura 33: Multidao.jpg
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_22/multidao.jpg]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_22/multidao.jpg]
 image::exercicio_22/multidao.jpg[]
 
 
@@ -329,17 +329,17 @@ O resultado depois de fazer a varredura foi o seguinte:
 
 
 .Figura 34: Resultado.jpg
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_22/resultado.jpg]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_22/resultado.jpg]
 image::exercicio_22/resultado.jpg[]
 
 
 .Figura 35: Resultado.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_22/resultado.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_22/resultado.png]
 image::exercicio_22/resultado.png[]
 
 
 .Figura 36: Localização.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_22/localizacao.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_22/localizacao.png]
 image::exercicio_22/localizacao.png[]
 
 
@@ -347,16 +347,16 @@ Como pode ser notado nessa última imagem, o resultado foi que o algoritmo encon
 
 === Capítulo 23. Extração de características: Momentos de Hu para contornos 
 
-Agora nesse capítulo, foi pedido para modificar o código, o que gerou o arquivo https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_23/momentos.cpp[momentos.cpp] após as alterações, e com essas mudanças, foi pedido para se obter um arquivo com números, que eles, por sua vez, são valores equivalentes aos momentos de Hu para os contornos de figuras que estão disponíveis na imagem que foi processada pelo código.
+Agora nesse capítulo, foi pedido para modificar o código, o que gerou o arquivo https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_23/momentos.cpp[momentos.cpp] após as alterações, e com essas mudanças, foi pedido para se obter um arquivo com números, que eles, por sua vez, são valores equivalentes aos momentos de Hu para os contornos de figuras que estão disponíveis na imagem que foi processada pelo código.
 
 
 .Figura 37: Imagem original.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_23/momentos.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_23/momentos.png]
 image::exercicio_23/momentos.png[]
 
 
 .Figura 38: Imagem processada.png
-[link=https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_23/contornos-rotulados.png]
+[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_23/contornos-rotulados.png]
 image::exercicio_23/contornos-rotulados.png[]
 
 .Momentos de Hu dos contornos das figuras
@@ -410,7 +410,7 @@ As imagens com números de entradas foram as seguintes:
 +++Dígito 6+++
 |===
 
-Após passarem pelo código https://github.com/Arthurfrc/arthurfrc.github.io/blob/main/exercicio_24/morfologia2.cpp[morfologia2.cpp] , as saídas foram o seguinte:
+Após passarem pelo código https://github.com/IgorCirne/IgorCirnePDI/tree/main//exercicio_24/morfologia2.cpp[morfologia2.cpp] , as saídas foram o seguinte:
 
 [cols="a,a,a", frame=none, grid=none, align=center]
 |===
