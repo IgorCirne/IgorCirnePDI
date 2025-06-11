@@ -76,8 +76,7 @@ Arquivo YML gerado: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercici
 A outra parte do exercício pedia para traçar um gráfico da diferença calculada ao londo de uma linha extraída das imagens correspondentes.
 O gráfico extraído foi esse:
 
-.Figura 7: Diferença entre senóides (extraída com a ajuda do seguinte programa feito em Python https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/diferencas.ipynb[diferencas.ipynb], e compilado no Jupyter Notebook)
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/diferenca.png]
+.Figura 7: Diferença entre senóides
 image::exercicio_5/diferenca.png[]
 
 Pode-se notar na imagem que anova onda formada pela sobreposição das senóides das imagens anteriores também é periódica, mas com um padrão muito mais complexo do que as suas geradoras, isso acontece porque as ondas que a formaram se misturam e se interferem, o que acaba gerando essa nova estrutura oscilatória.
