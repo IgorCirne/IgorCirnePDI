@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(kmeans_random VERSION 0.1.0 LANGUAGES C CXX)
+
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+add_executable(kmeans_random kmeans_random.cpp)
+target_link_libraries(kmeans_random ${OpenCV_LIBS})
