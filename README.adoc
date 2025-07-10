@@ -2,4 +2,4 @@
 :experimental:
 ifndef::env-github[:toc:]
 
-Este repositório está em construção, o arquivo index é somente um modelo que encontrei de um colega
+Este repositório está em construção, para ver o resultado em ASCIIDOC, basta acessar o [link](https://igorcirne.github.io/IgorCirnePDI/)
