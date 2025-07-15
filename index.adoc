@@ -246,7 +246,7 @@ Resultado da primeira execução:
 .Figura 30: Contorno original com 746 pontos
 image::exercicio_21/contornos_original.png[]
 
-Na segunda parte, o programa foi modificado para reduzir os pontos de contorno, gerando o arquivo https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/contornos2.cpp[contornos2.cpp].
+Na segunda parte, o programa foi modificado para reduzir os pontos de contorno, gerando o arquivo https://github.com/IgorCirne/IgorCirnePDI/blob/main/exercicio_21/contornos2.cpp[contornos2.cpp].
 
 Resultado:
 
