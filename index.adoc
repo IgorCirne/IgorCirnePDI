@@ -269,12 +269,9 @@ image::exercicio_22/pessoa.jpg[]
 .Figura 33: Imagem da multidão
 image::exercicio_22/multidao.jpg[]
 
-Resultados obtidos após análise por varredura:
+Resultado obtido após análise por varredura:
 
-.Figura 34: Pessoa localizada
-image::exercicio_22/resultado.png[]
-
-.Figura 35: Coordenada encontrada: [2129, 495]
+.Figura 34: Coordenada encontrada: [2129, 495]
 image::exercicio_22/localizacao.png[]
 
 === Capítulo 23. Extração de características – Momentos de Hu (contornos)
@@ -283,10 +280,10 @@ A proposta era modificar o código para extrair os momentos de Hu de contornos r
 
 Imagens envolvidas:
 
-.Figura 36: Imagem original
+.Figura 35: Imagem original
 image::exercicio_23/momentos.png[]
 
-.Figura 37: Contornos rotulados
+.Figura 36: Contornos rotulados
 image::exercicio_23/contornos-rotulados.png[]
 
 .Momentos de Hu para contornos identificados
