@@ -239,71 +239,59 @@ Resultados:
 
 === Capítulo 21. Extração de contornos
 
-Neste capítulo, o exercício é dividido em 2 partes, a primeira pede para aplicar o código original do https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/contornos.cpp[contornos.cpp] na imagem dos retângulos e ver quantos pontos são gerados para o seu contorno.
+Este exercício foi dividido em duas partes. A primeira consistia em aplicar o código https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/contornos.cpp[contornos.cpp] à imagem dos retângulos e verificar o número de pontos extraídos do contorno.
 
-O resultado foi o seguinte:
+Resultado da primeira execução:
 
-.Figura 30: Pontos de contorno extraídos
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/contornos_original.png]
+.Figura 30: Contorno original com 746 pontos
 image::exercicio_21/contornos_original.png[]
 
-Após isso, a atividade pediu para modificar o programa e extrair os contornos novamente, ao final o código finalizado ficou neste arquivo https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/contornos2.cpp[contornos2.cpp] e a saída foi a seguinte:
+Na segunda parte, o programa foi modificado para reduzir os pontos de contorno, gerando o arquivo https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/contornos2.cpp[contornos2.cpp].
 
-.Figura 31: Pontos de contorno simplificados extraídos
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/cont_retangulos.png]
+Resultado:
+
+.Figura 31: Contorno simplificado com 10 pontos
 image::exercicio_21/cont_retangulos.png[]
 
-Como podemos notar, o número de pontos encontrados caiu de 746 para 10, ou seja, as modificações pedidas no código fizeram que pontos redundantes fossem ignorados na hora de contar os pontos do contorno.
+Nota: O resultado ideal seria 8 pontos, mas é possível que alguns cantos tenham sido contados duas vezes devido à interseção dos retângulos.
 
-OBS: O resultado IDEAL seriam 8 pontos, mas é possível que tenham sido contados 2 pontos em cada aresta interna, pois é onde ficam as interseções dos quadrados.
+=== Capítulo 22. Extração de características – Momentos de Hu (regiões)
 
-=== Capítulo 22. Extração de características: Momentos de Hu para regiões
+Neste exercício, o objetivo era identificar uma pessoa no meio de uma multidão utilizando momentos de Hu.
 
-Esse exercício foi um pouco complicado de se resolver, pois ele pedia para procurar por uma pessoa no meio da multidão, o código feito para isso foi o 
+O código implementado está disponível em: https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/momentos-regioes-2.cpp[momento-regioes-2.cpp].
 
-https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/momentos-regioes-2.cpp[momento-regioes-2.cpp] , que rodou com as seguintes imagens para procurar.
+Imagens utilizadas:
 
-.Figura 32: Pessoa.jpg
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/pessoa.jpg]
+.Figura 32: Pessoa isolada
 image::exercicio_22/pessoa.jpg[]
 
-.Figura 33: Multidao.jpg
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/multidao.jpg]
+.Figura 33: Imagem da multidão
 image::exercicio_22/multidao.jpg[]
 
+Resultados obtidos após análise por varredura:
 
-O resultado depois de fazer a varredura foi o seguinte:
-
-
-.Figura 34: Resultado.png
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/resultado.png]
+.Figura 34: Pessoa localizada
 image::exercicio_22/resultado.png[]
 
-
-.Figura 35: Localização.png
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/localizacao.png]
+.Figura 35: Coordenada encontrada: [2129, 495]
 image::exercicio_22/localizacao.png[]
 
+=== Capítulo 23. Extração de características – Momentos de Hu (contornos)
 
-Como pode ser notado nessa última imagem, o resultado foi que o algoritmo encontrou a pessoa procurada no ponto [2129, 495] no meio da multidão.
+A proposta era modificar o código para extrair os momentos de Hu de contornos rotulados de uma imagem. O resultado foi implementado no arquivo https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/momentos.cpp[momentos.cpp].
 
-=== Capítulo 23. Extração de características: Momentos de Hu para contornos 
+Imagens envolvidas:
 
-Agora nesse capítulo, foi pedido para modificar o código, o que gerou o arquivo https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/momentos.cpp[momentos.cpp] após as alterações, e com essas mudanças, foi pedido para se obter um arquivo com números, que eles, por sua vez, são valores equivalentes aos momentos de Hu para os contornos de figuras que estão disponíveis na imagem que foi processada pelo código.
-
-
-.Figura 36: Imagem original.png
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/momentos.png]
+.Figura 36: Imagem original
 image::exercicio_23/momentos.png[]
 
-
-.Figura 37: Imagem processada.png
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/contornos-rotulados.png]
+.Figura 37: Contornos rotulados
 image::exercicio_23/contornos-rotulados.png[]
 
-.Momentos de Hu dos contornos das figuras
+.Momentos de Hu para contornos identificados
 |===
-|N| 𝜂~1~| 𝜂~2~| 𝜂~3~| 𝜂~4~| 𝜂~5~| 𝜂~6~| 𝜂~7~
+|N |𝜂~1~|𝜂~2~|𝜂~3~|𝜂~4~|𝜂~5~|𝜂~6~|𝜂~7~
 |3| 0.798046| 5.00282| 8.66349| 12.1468| -22.5546| 14.9779| -23.5111
 |5| 0.798076| 5.19683| 6.91077| 11.4442| -20.9916| -14.3809| -20.6653
 |7| -0.0869539| -0.157887| 1.49555| 1.6833| 3.27273| 1.60454| -5.49111
@@ -329,12 +317,13 @@ image::exercicio_23/contornos-rotulados.png[]
 |29| 0.338675| 0.738061| 3.85143| 4.03897| 7.98444| 4.4133| -9.42881
 |===
 
-Com esses valores encontrados pelos momentos de Hu, podemos observar que figuras semelhantes vão ter valores semelhantes, como por exemplo, as figuras de número 3, 5 e 12 (entre outras), que são arruelas circulares, e claro que, mesmo que sejam semelhantes, se forem contornos parecidos, mas que estão rotacionados, podem haver divergências, como no caso do momento 𝜂~7~ das figuras 10 e 13, que estão basicamente apontando para sentidos opostos.
+Com esses dados, é possível notar que figuras semelhantes (como as arruelas circulares) compartilham valores de momentos semelhantes, ainda que pequenas variações possam surgir por rotação ou leve distorção.
 
 === Capítulo 24. Filtragem de forma com morfologia matemática
 
-Nesse último exercício foi pedido para que se possa fazer os dígitos de 7 segmentos virarem um número que possa ser processado por um leitor digital, e para isso, é necessário juntar os 7 segmentos e, por poder ser um número decimal, devemos manter o ponto que separa a parte inteira da parte fracionada separado.
-As imagens com números de entradas foram as seguintes:
+Neste exercício final, o objetivo era transformar dígitos de 7 segmentos em números legíveis por um sistema digital. É importante preservar o ponto decimal separadamente para manter a estrutura numérica.
+
+Imagens de entrada:
 
 [cols="a,a,a", frame=none, grid=none, align=center]
 |===
@@ -352,22 +341,22 @@ As imagens com números de entradas foram as seguintes:
 +++Dígito 6+++
 |===
 
-Após passarem pelo código https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_24/morfologia2.cpp[morfologia2.cpp] , as saídas foram o seguinte:
+Após o processamento com o código https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_24/morfologia2.cpp[morfologia2.cpp], os resultados foram os seguintes:
 
 [cols="a,a,a", frame=none, grid=none, align=center]
 |===
 |image::exercicio_24/digito-1-resultado.png[] 
-+++Dígito 1+++
++++Resultado 1+++
 |image::exercicio_24/digito-2-resultado.png[] 
-+++Dígito 2+++
++++Resultado 2+++
 |image::exercicio_24/digito-3-resultado.png[] 
-+++Dígito 3+++
++++Resultado 3+++
 |image::exercicio_24/digito-4-resultado.png[] 
-+++Dígito 4+++
++++Resultado 4+++
 |image::exercicio_24/digito-5-resultado.png[] 
-+++Dígito 5+++
++++Resultado 5+++
 |image::exercicio_24/digito-6-resultado.png[] 
-+++Dígito 6+++
++++Resultado 6+++
 |===
 
-O que foi uma saída aceitável para o leitor poder decifrar qual número está sendo mostrado no leitor de 7 dígitos.
+O resultado final foi satisfatório, com os números bem definidos para futura interpretação por um leitor automatizado.
