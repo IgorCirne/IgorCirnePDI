@@ -10,76 +10,72 @@ Igor Cirne Borges de Oliveira
 :summary:
 
 toc::[]
+
 == Introdução
 
-Esta é uma página dedicada aos projetos e atividades de PDI, criada com AsciiDoc e hospedada no GitHub Pages.
+Esta página reúne os projetos e atividades desenvolvidos na disciplina de Processamento Digital de Imagens (PDI), organizados em formato AsciiDoc e hospedados no GitHub Pages.
 
 == Lista 1
 
-=== Capítulo 2. Manipulando pixels em uma imagem
-Com base no programa https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/pixels.cpp[pixels.cpp] , foi gerado o programa https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/regions.cpp[regions.cpp] que é capaz de,
-ao entrar com as coordenadas (x, y) de dois pontos P1 e P2, deixar a região entre eles com cores em negativo.
+=== Capítulo 2. Manipulação de pixels em imagens
 
-Para o exercício, a imagem abaixo foi dada como entrada no código:
+Com base no programa https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/pixels.cpp[pixels.cpp], foi desenvolvido o código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/regions.cpp[regions.cpp], que recebe como entrada dois pontos P1 e P2 (coordenadas x e y) e aplica o efeito de negativo à região compreendida entre eles.
+
+Imagem de entrada:
 
 .Figura 1: biel.png
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/biel.png]
 image::exercicio_2/biel.png[]
 
-E após compilar o programa com o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/CMakeLists.txt[CMakeLists.txt] adequado, foram obtido os resultados abaixo:
+Após compilar o código com o arquivo https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/CMakeLists.txt[CMakeLists.txt], os seguintes resultados foram obtidos:
 
-
-P1 = [100, 50]
-P2 = [200, 200]
+*P1 = [100, 50], P2 = [200, 200]*
 
 .Figura 2: biel-2.png
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/biel-2.png]
 image::exercicio_2/biel-2.png[]
 
-
-P1 = [50, 50]
-P2 = [100, 150]
+*P1 = [50, 50], P2 = [100, 150]*
 
 .Figura 3: biel-3.png
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/biel-3.png]
 image::exercicio_2/biel-3.png[]
 
+Na segunda parte do exercício, que envolvia a troca de regiões, foi criado o programa https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/trocaregioes.cpp[trocaregioes.cpp], utilizando um novo arquivo de build: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/CMakeLists2.txt[CMakeLists.txt].
 
-Para a segunda parte do exercício, a de troca de regiões, foi feito o código de https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/trocaregioes.cpp[trocaregioes.cpp] e foi preciso modificar um pouco o arquivo anterior para este https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/CMakeLists2.txt[CMakeLists.txt], novamente, com a imagem original do Biel.png como entrada, resultando encontrado foi o da saída abaixo:
-
+Resultado:
 
 .Figura 4: trocaregioes.png
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_2/trocaregioes.png]
 image::exercicio_2/trocaregioes.png[]
 
+=== Capítulo 5. Serialização de dados com FileStorage
 
-=== Capítulo 5, Serialização de dados em ponto flutuante via FileStorage
+Nesta atividade, foi solicitado gerar uma imagem senoidal de 256x256 pixels com 4 períodos e amplitude 127, salvando-a em formato `.png` e `.yml`.
 
-Nesse capítulo foi instruído na atividade à se fazer uma imagem de 256x256 pixels de uma senóide com 4 períodos e amplitude de 127, e gerar um .png e um .yml dessa senóide criada.
+Exemplo de senóide com 8 períodos:
 
-Senóide do exercício, com 8 períodos:
-
-.Figura 5: Senóide de 8 períodos
+.Figura 5
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/8-senoide-256.png]
 image::exercicio_5/8-senoide-256.png[]
 
-Arquivo YML: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/8-senoide-256.yml[8-senoide-256.yml]
+Arquivo YML: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/8-senoide-256.yml
 
-O resultado gerado pelo programa para a senóide de 4 períodos foi a seguinte:
+Resultado com 4 períodos:
 
-.Figura 6: Senóide de 4 períodos
+.Figura 6
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/4-senoide-256.png]
 image::exercicio_5/4-senoide-256.png[]
 
-Arquivo YML gerado: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/4-senoide-256.yml[4-senoide-256.yml]
+Arquivo YML: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/4-senoide-256.yml
 
-A outra parte do exercício pedia para traçar um gráfico da diferença calculada ao londo de uma linha extraída das imagens correspondentes.
-O gráfico extraído foi esse:
+Em seguida, foi traçado um gráfico da diferença entre uma linha extraída dessas imagens:
 
 .Figura 7: Diferença entre senóides
 image::exercicio_5/diferenca.png[]
 
-Pode-se notar na imagem que anova onda formada pela sobreposição das senóides das imagens anteriores também é periódica, mas com um padrão muito mais complexo do que as suas geradoras, isso acontece porque as ondas que a formaram se misturam e se interferem, o que acaba gerando essa nova estrutura oscilatória.
+Nota-se que a sobreposição das ondas originais resulta em uma nova forma de onda periódica, porém mais complexa, devido à interferência entre elas.
+
 
 === Capítulo 10, Decomposição de imagens em planos de bits
 
