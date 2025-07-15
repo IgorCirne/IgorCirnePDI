@@ -239,7 +239,7 @@ Resultados:
 
 === Capítulo 21. Extração de contornos
 
-Este exercício foi dividido em duas partes. A primeira consistia em aplicar o código https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_21/contornos.cpp[contornos.cpp] à imagem dos retângulos e verificar o número de pontos extraídos do contorno.
+Este exercício foi dividido em duas partes. A primeira consistia em aplicar o código https://github.com/IgorCirne/IgorCirnePDI/blob/main/exercicio_21/contornos.cpp[contornos.cpp] à imagem dos retângulos e verificar o número de pontos extraídos do contorno.
 
 Resultado da primeira execução:
 
@@ -259,7 +259,7 @@ Nota: O resultado ideal seria 8 pontos, mas é possível que alguns cantos tenha
 
 Neste exercício, o objetivo era identificar uma pessoa no meio de uma multidão utilizando momentos de Hu.
 
-O código implementado está disponível em: https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/momentos-regioes-2.cpp[momento-regioes-2.cpp].
+O código implementado está disponível em: https://github.com/IgorCirne/IgorCirnePDI/blob/main/exercicio_22/momentos-regioes-2.cpp[momento-regioes-2.cpp].
 
 Imagens utilizadas:
 
@@ -279,7 +279,7 @@ image::exercicio_22/localizacao.png[]
 
 === Capítulo 23. Extração de características – Momentos de Hu (contornos)
 
-A proposta era modificar o código para extrair os momentos de Hu de contornos rotulados de uma imagem. O resultado foi implementado no arquivo https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/momentos.cpp[momentos.cpp].
+A proposta era modificar o código para extrair os momentos de Hu de contornos rotulados de uma imagem. O resultado foi implementado no arquivo https://github.com/IgorCirne/IgorCirnePDI/blob/main/exercicio_23/momentos.cpp[momentos.cpp].
 
 Imagens envolvidas:
 
@@ -341,7 +341,7 @@ Imagens de entrada:
 +++Dígito 6+++
 |===
 
-Após o processamento com o código https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_24/morfologia2.cpp[morfologia2.cpp], os resultados foram os seguintes:
+Após o processamento com o código https://github.com/IgorCirne/IgorCirnePDI/blob/main/exercicio_24/morfologia2.cpp[morfologia2.cpp], os resultados foram os seguintes:
 
 [cols="a,a,a", frame=none, grid=none, align=center]
 |===
