@@ -327,17 +327,12 @@ image::exercicio_22/multidao.jpg[]
 O resultado depois de fazer a varredura foi o seguinte:
 
 
-.Figura 34: Resultado.jpg
-[link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/resultado.jpg]
-image::exercicio_22/resultado.jpg[]
-
-
-.Figura 35: Resultado.png
+.Figura 34: Resultado.png
 [link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/resultado.png]
 image::exercicio_22/resultado.png[]
 
 
-.Figura 36: Localização.png
+.Figura 35: Localização.png
 [link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_22/localizacao.png]
 image::exercicio_22/localizacao.png[]
 
@@ -349,12 +344,12 @@ Como pode ser notado nessa última imagem, o resultado foi que o algoritmo encon
 Agora nesse capítulo, foi pedido para modificar o código, o que gerou o arquivo https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/momentos.cpp[momentos.cpp] após as alterações, e com essas mudanças, foi pedido para se obter um arquivo com números, que eles, por sua vez, são valores equivalentes aos momentos de Hu para os contornos de figuras que estão disponíveis na imagem que foi processada pelo código.
 
 
-.Figura 37: Imagem original.png
+.Figura 36: Imagem original.png
 [link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/momentos.png]
 image::exercicio_23/momentos.png[]
 
 
-.Figura 38: Imagem processada.png
+.Figura 37: Imagem processada.png
 [link=https://github.com/IgorCirne/IgorCirne.github.io/blob/main/exercicio_23/contornos-rotulados.png]
 image::exercicio_23/contornos-rotulados.png[]
 
