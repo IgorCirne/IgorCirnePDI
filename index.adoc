@@ -77,183 +77,139 @@ image::exercicio_5/diferenca.png[]
 Nota-se que a sobreposição das ondas originais resulta em uma nova forma de onda periódica, porém mais complexa, devido à interferência entre elas.
 
 
-=== Capítulo 10, Decomposição de imagens em planos de bits
+=== Capítulo 10. Decomposição de imagens em planos de bits
 
-Essa atividade consiste em usar o código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_10/bitplanes.cpp[bitplanes.cpp] como base e criar um que possa recuperar uma imagem codificada escondida dentro de outra, em um processo chamado de esteganografia.
+Esta atividade explora a esteganografia, onde uma imagem é codificada discretamente dentro de outra. O código base utilizado foi https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_10/bitplanes.cpp[bitplanes.cpp], e o programa criado para recuperar a imagem oculta foi o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_10/recover.cpp[recover.cpp].
 
-Foi criado então o código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_10/recover.cpp[recover.cpp] com esse intuito, e utilizado na imagem à seguir:
+Imagem de entrada:
 
-.Figura 8: Imagem codificada
+.Figura 8: Imagem com informação oculta
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_10/esteganografia.png]
 image::exercicio_10/esteganografia.png[]
 
+Imagem recuperada:
 
-
-O resultado que saiu após o código ser rodado foi a seguinte imagem:
-
-.Figura 9: Imagem recuperada
+.Figura 9: Resultado da decodificação
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_10/imagem_recuperada.png]
 image::exercicio_10/imagem_recuperada.png[]
 
-=== Capítulo 11, Preenchendo regiões
-Nessa situação do código de https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/labeling.cpp[labeling.cpp] somente 255 objetos poderem ser verificados, isso acontece por causa do tipo de dados (uchar) que é utilizado, pois como esse tipo possui 8 bits, o máximo de tons que se pode utilizar é de 2^8^, e caso seja necessário contar mais do que 255 objetos, o código iria acabar voltando ao tom 0, para que isso seja possível, é necessário uma mudança de tipo para um dado que tenha mais capacidade de armazenamento, como por exemplo, usar CV_16U que suporta 16bits, assim poderia contar até 2^16^ objetos na figura.
+=== Capítulo 11. Rotulagem de regiões
 
-A alteração seria abaixo da linha 21 do programa https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/labeling.cpp[labeling.cpp], que é onde seria adicionado as linhas de código abaixo para se criar a iamgem com 16 bits para armazenar os rótulos, ao final, antes dos comandos de *imshow*, faz-se uma conversão de volta para 8 bits para poder normalizar a imagem e mostrá-la em tela novamente.
+O código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/labeling.cpp[labeling.cpp] rotula regiões conectadas em uma imagem. No entanto, por utilizar o tipo `uchar` (8 bits), apenas 255 objetos distintos podem ser representados. Para permitir contagem além desse limite, é necessário alterar o tipo de `CV_8U` para `CV_16U`.
+
+Modificação sugerida abaixo da linha 21:
 
 [source,cpp]
 ----
-21
-    *labelImage = cv::Mat::zeros(height, width, CV_16U);*
-22    
-    [. . .]
-30  if (image.at<uchar>(i, j) == 255 *&& labelImage.at<ushort>(i, j) == 0*) {
-31      // achou um objeto
-32      nobjects++;
-33      // para o floodfill as coordenadas
-34      // x e y são trocadas.
-35      p.x = j;
-36      p.y = i;
-37      // preenche o objeto com o contador
-38      cv::floodFill(*labelImage*, p, nobjects);
-    
-    [. . .]
-42  std::cout << "a figura tem " << nobjects << " bolhas\n";
-    *cv::Mat displayImage;*
-    *labelImage.convertTo(displayImage, CV_8U, 255.0 / nobjects);*
+21  labelImage = cv::Mat::zeros(height, width, CV_16U);
+...
+30  if (image.at<uchar>(i, j) == 255 && labelImage.at<ushort>(i, j) == 0) {
+    // início do flood fill
+...
+42  std::cout << "A figura tem " << nobjects << " bolhas\n";
+    cv::Mat displayImage;
+    labelImage.convertTo(displayImage, CV_8U, 255.0 / nobjects);
 ----
 
-Entre "*" estão as partes adicionadas ao código de labeling.cpp para poder marcar mais de 255 objetos em cena.
+Para a segunda parte do exercício, que envolve identificar bolhas com ou sem buracos internos (excluindo bordas), foi desenvolvido o código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/newlabeling.cpp[newlabeling.cpp].
 
-Para a segunda parte do exercício, onde devemos aprimorar o código de https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/labeling.cpp[labeling.cpp] para que seja possível identificar regiões com ou sem buracos internos, foi feito o seguinte arquivo https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/newlabeling.cpp[newlabeling.cpp], onde foi assumido que não se deve contar as bolhas nas bordas da imagem.
+Evolução do processo:
 
-Aqui abaixo podemos observar alguns passos do processo de FloodFill:  +
-1. A imagem bolhas.png de entrada  +
-2. Após excluir as bolhas que tocam as bordas do processo  +
-3. Após finalizar o processo de labeling  +
-4. A contagem do total de bolhas  +
-
-.Figura 10: Bolhas
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/bolhas.png]
+.Figura 10: Imagem original
 image::exercicio_11/bolhas.png[]
 
-
-.Figura 11: Bolhas 2
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/bolhas2.png]
+.Figura 11: Após remoção das bolhas da borda
 image::exercicio_11/bolhas2.png[]
 
-.Figura 12: Bolhas 3
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/bolhas3.png]
+.Figura 12: Após rotulagem completa
 image::exercicio_11/bolhas3.png[]
 
-.Figura 13: Contagem de bolhas
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_11/status.png]
+.Figura 13: Contagem final de bolhas
 image::exercicio_11/status.png[]
 
+=== Capítulo 12. Equalização de histograma
 
-=== Capítulo 12, Manipulação de histogramas
+Com base no código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/histogram.cpp[histogram.cpp], foi desenvolvido o programa https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/equalize.cpp[equalize.cpp] para realizar a equalização do histograma de imagens capturadas com o aplicativo DroidCam.
 
-Para este exercício, foi proposto que fizéssemos um código tendo o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/histogram.cpp[histogram.cpp] como base para equalizar o histograma de uma imagem gerada por uma câmera.
-Nesse caso, foi utilizado o programa DroidCAM em conjunto com um celular Samsung M53 5G para conseguir obter os resultados em vídeo e capturas de tela do histograma, o código que foi utilizado é o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/equalize.cpp[equalize.cpp], e os resultados obtidos foram as imagens a seguir:
+Imagens de entrada e resultado:
 
-.Figura 14: Dedo em frente à câmera
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/dedo .png]
+.Figura 14: Dedo na câmera
 image::exercicio_12/dedo.png[]
 
-.Figura 15: Polvo Rosa
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/polvo_rosa.png]
+.Figura 15: Polvo rosa
 image::exercicio_12/polvo_rosa.png[]
 
-.Figura 16: Polvo Verde
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/polvo_verde.png]
+.Figura 16: Polvo verde
 image::exercicio_12/polvo_verde.png[]
 
-.Figura 17: Tentáculo rosa sobre a câmera
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/rosa.png]
+.Figura 17: Tentáculo rosa
 image::exercicio_12/rosa.png[]
 
-.Figura 18: Tentáculo verde sobre a câmera
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/verde.png]
+.Figura 18: Tentáculo verde
 image::exercicio_12/verde.png[]
 
+=== Capítulo 14. Filtragem no domínio espacial I – Convolução
 
-=== Capítulo 14, Filtragem no domínio espacial I - Convolução
+O exercício propõe a aplicação de filtros de média com máscaras de diferentes tamanhos (3x3, 11x11 e 21x21). O código está disponível em: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_14/convolucao.cpp[convolucao.cpp].
 
-Neste exercício é proposto que seja feito filtros de média com tamanhos de máscaras de 11x11 e 21x21, faça uma captura de imagem e compare ambos os filtros com o filtro de média com máscara de tamanho 3x3.
+Resultados:
 
-O código utlilizado se encontra neste arquivo https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_14/convolucao.cpp[convolucao.cpp]
-
-Após ser feito a captura com a mesma imagem, as saídas dos filtros fpra as seguintes:
-
-.Figura 19: Saída de filtro com máscara tamanho 3x3
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_14/Filtro3x3.png]
+.Figura 19: Filtro 3x3
 image::exercicio_14/Filtro3x3.png[]
 
-.Figura 20: Saída de filtro com máscara tamanho 11x11
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_14/Filtro11x11.png]
+.Figura 20: Filtro 11x11
 image::exercicio_14/Filtro11x11.png[]
 
-
-.Figura 21: Saída de filtro com máscara tamanho 21x21
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_14/Filtro21x21.png]
+.Figura 21: Filtro 21x21
 image::exercicio_14/Filtro21x21.png[]
 
-=== Capítulo 15, Filtragem no domínio espacial II - TiltShift
+=== Capítulo 15. Filtragem no domínio espacial II – Tilt-Shift
+
+*(Este capítulo ainda não possui conteúdo registrado.)*
 
 == Lista 2
 
-=== Capítulo 16, A Tranformada Discreta de Fourier
+=== Capítulo 16. Transformada Discreta de Fourier
 
-Para o exercício deste capítulo, é pedido que seja calculado o espectro de magnetude de uma imagem de senóide de 256x256 pixels usando o código do arquivo de https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_16/dft.cpp[dft.cpp] , e compará-lo com um código adaptado com base no https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_5/filestorage.cpp[filestorage.cpp] onde esse código terá como entrada um código em YAML equivalente à imagem de entrada do arquivo dft.cpp.
-
-O código feito foi o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_16/dft_2.cpp[dft_2.cpp] , onde a entrada foi a mesma imagem de 256x256 pixels, porém o arquivo ".yml" da mesma, gerado com o filestorage.cpp anteriormente.
+Com o código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_16/dft.cpp[dft.cpp], foi calculado o espectro de magnitude de uma imagem senoidal. Em seguida, um código alternativo foi feito para ler a imagem diretamente de um arquivo `.yml`, disponível em: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_16/dft_2.cpp[dft_2.cpp].
 
 .Figura 22: Imagem de entrada
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_16/figura.png]
 image::exercicio_16/Figura.png[]
 
-As saídas que consegui foram as seguintes:
-
-.Figura 23: Saída direto da imagem
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_16/espectros.png]
+.Figura 23: Espectro via imagem
 image::exercicio_16/Espectros.png[]
 
-.Figura 24: Saída do código YAML da imagem
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_16/espectros_2.png]
+.Figura 24: Espectro via YAML
 image::exercicio_16/Espectros_2.png[]
 
-Pode não parecer nada diferente, mas a segunda imagem se aproxima mais da senóide original pelo fato de ela ser uma representação feita diretamente dos valores obtidos ao invés de serem obtidos após uma conversão para imagem como a primeira.
+A segunda imagem apresenta melhor fidelidade à senóide original, pois os valores são lidos diretamente do arquivo de dados.
 
-=== Capítulo 17. Filtragem no Domínio da Frequência
+=== Capítulo 17. Filtragem no domínio da frequência – Filtro homomórfico
 
-Nesse capítulo é proposto que peguemos o código da https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/dftfilter.cpp[dftfilter.cpp] e modifiquemos para poder corrigir iluminações em cenas com o filtro homomórfico.
+Foi proposto modificar o código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/dftfilter.cpp[dftfilter.cpp] para aplicar correção de iluminação com filtro homomórfico. O código final está disponível em: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/homomorfico.cpp[homomorfico.cpp].
 
-Com as mudanças feitas, foi obtido o seguinte código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/homomorfico.cpp[homomorfico.cpp] , onde, ao ser rodado com a imagem, mostrará uma barra para poder ajustar a iluminação da imagem como mostra no exemplo com as fotos do Biel à seguir.
+Exemplos de resultado com ajustes na barra deslizante:
 
-
-.Figura 25: Filtro homomórfico automático antes de ser implementado o slider para ajustes manuais
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/homomorfico.png]
+.Figura 25: Resultado automático
 image::exercicio_17/homomorfico.png[]
 
 .Figura 26: Imagem original
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/biel.png]
 image::exercicio_17/biel.png[]
 
-.Figura 27: Filtro com 14 selecionado na barra
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/Filtro-14.png]
+.Figura 27: Filtro com valor 14
 image::exercicio_17/Filtro-14.png[]
 
-.Figura 28: Filtro com 50 selecionado na barra
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/Filtro-50.png]
+.Figura 28: Filtro com valor 50
 image::exercicio_17/Filtro-50.png[]
 
-.Figura 29: Filtro com 100 selecionado na barra
-[link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_17/Filtro-100.png]
+.Figura 29: Filtro com valor 100
 image::exercicio_17/Filtro-100.png[]
 
 === Capítulo 20. Quantização vetorial com k-means
 
-No capítulo em questão, a atividade a ser desenvolvida era a de usar o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_20/kmeans.cpp[kmeans.cpp] como base para desenvolver um outro que execute com o parâmetro de nRodadas = 1, gerando 10 rodadas diferentes de algoritmos, e a cada rodada, gerando centros aleatórios para o algoritmo iniciar.
-Foram realizadas as mudanças e o algoritmo final foi o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_20/kmeans_random.cpp[kmeans_random.cpp] , e ao final das 10 rodadas com a imagem do https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_20/biel.png[Biel.png] , os resultados foram as seguintes saídas:
+A atividade consistia em realizar 10 execuções do algoritmo k-means com diferentes centros iniciais, baseado no código https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_20/kmeans.cpp[kmeans.cpp]. O código final com aleatoriedade está em: https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_20/kmeans_random.cpp[kmeans_random.cpp].
+
+Resultados:
 
 [cols="a,a,a", frame=none, grid=none, align=center]
 |===
@@ -277,11 +233,7 @@ Foram realizadas as mudanças e o algoritmo final foi o https://github.com/IgorC
 +++Saída 9+++
 |image::exercicio_20/saida10.jpg[] 
 +++Saída 10+++
-|
-|
 |===
-
-As saídas estão diferentes exatamente por causa dos centros escolhidos aleatoriamente no início.
 
 == Lista 3
 
