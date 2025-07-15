@@ -157,7 +157,7 @@ image::exercicio_11/status.png[]
 === Capítulo 12, Manipulação de histogramas
 
 Para este exercício, foi proposto que fizéssemos um código tendo o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/histogram.cpp[histogram.cpp] como base para equalizar o histograma de uma imagem gerada por uma câmera.
-Nesse caso, foi utilizado o programa DroidCAM em conjunto com um celular Samsungo S20 FE para conseguir obter os resultados em vídeo e capturas de tela do histograma, o código que foi utilizado é o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/equalize.cpp[equalize.cpp], e os resultados obtidos foram as imagens a seguir:
+Nesse caso, foi utilizado o programa DroidCAM em conjunto com um celular Samsung M53 5G para conseguir obter os resultados em vídeo e capturas de tela do histograma, o código que foi utilizado é o https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/equalize.cpp[equalize.cpp], e os resultados obtidos foram as imagens a seguir:
 
 .Figura 14: Dedo em frente à câmera
 [link=https://github.com/IgorCirne/IgorCirnePDI/tree/main/exercicio_12/dedo .png]
