@@ -15,7 +15,7 @@ toc::[]
 
 Esta página reúne os projetos e atividades desenvolvidos na disciplina de Processamento Digital de Imagens (PDI), organizados em formato AsciiDoc e hospedados no GitHub Pages.
 
-== Lista 1
+== Unidade 1
 
 === Capítulo 2. Manipulação de pixels em imagens
 
@@ -167,7 +167,7 @@ image::exercicio_14/Filtro21x21.png[]
 
 *(Este capítulo ainda não possui conteúdo registrado.)*
 
-== Lista 2
+== Unidade 2
 
 === Capítulo 16. Transformada Discreta de Fourier
 
@@ -235,7 +235,7 @@ Resultados:
 +++Saída 10+++
 |===
 
-== Lista 3
+== Unidade 3
 
 === Capítulo 21. Extração de contornos
 
